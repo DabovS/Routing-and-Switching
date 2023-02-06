@@ -224,6 +224,8 @@ No Internet Datagram Options
 
 ## VLSM
 
+![VLSM Network example 2](https://user-images.githubusercontent.com/124214430/216857334-66556f0f-a0eb-4c09-8143-62fc28820090.png)
+
 | Application | Mask | Hosts | Block |
 | --- | --- | --- | --- |
 | /25 | 128 | 126 | 128 |
