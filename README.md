@@ -58,15 +58,16 @@ Processing
 ## Protocols
 
 
-* Telnet
-* SSH
-* FTP
-* SNMP
-* HTTP
-* NTP
-* DNS
-* DHCP / BootP
-* APIPA
+* [Telnet](https://en.wikipedia.org/wiki/Telnet)
+* [SSH](https://en.wikipedia.org/wiki/Secure_Shell)
+* [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol)
+* [SNMP](https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol)
+* [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+* [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol)
+* [DNS](https://en.wikipedia.org/wiki/Domain_Name_System)
+* [DHCP / BootP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)
+* [APIPA](https://www.geeksforgeeks.org/what-is-apipa-automatic-private-ip-addressing/)
+
 
 ### Typical Port Use
 
