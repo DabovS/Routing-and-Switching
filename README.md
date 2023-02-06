@@ -172,3 +172,75 @@ No Internet Datagram Options
 | IPv6 | 41 |
 | GRE | 47 |
 | Layer 2 tunnel (L2TP) | 115 |
+
+## Sub-networks
+
+| Class | Format | Default Sub-Mask |
+| --- | --- | --- |
+| A | network.node.node.node | 255.0.0.0 |
+| B | network.network.node.node | 255.255.0.0 |
+| C | network.network.network.node | 255.255.255.0 |
+
+> 2^8 = 256
+
+## Classeless Inter-Domain Routing (CIDR)
+
+| Submask | CIDR value |
+| --- | --- |
+| 255.0.0.0 | /8 |
+| 255.128.0.0 | /9 |
+| 255.192.0.0 | /10 |
+| 255.224.0.0 | /11 |
+| 255.240.0.0 | /12 |
+| 255.248.0.0 | /13 |
+| 255.252.0.0 | /14 |
+| 255.254.0.0 | /15 |
+| 255.255.0.0 | /16 |
+| 255.255.128.0 | /17 |
+| 255.255.192.0 | /18 |
+| 255.255.224.0 | /19 |
+| 255.255.240.0 | /20 |
+| 255.255.248.0 | /21 |
+| 255.255.252.0 | /22 |
+| 255.255.254.0 | /23 |
+| 255.255.255.0 | /24 |
+| 255.255.255.128 | /25 |
+| 255.255.255.192 | /26 |
+| 255.255.255.224 | /27 |
+| 255.255.255.240 | /28 |
+| 255.255.255.248 | /29 |
+| 255.255.255.252 | /30 |
+
+> 8 to 15 - A / 16 to 23 A/B / /24 to /30 A/B/C 
+
+| CIDR | Mask | Bit | Block | Subnetwork | Host |
+| --- | --- | --- | --- | --- | --- |
+|  /25 | 128 | 1 bit inc - 7 bit not inc. | 128 | 0 and 128 | 2 subnetworks, each 126 hosts |
+| /26 | 192 | 2 bit inc - 6 bit not inc. | 64 | 0, 64, 128, 192 | 4 subnetworks, each 62 hosts |
+| /27 | 224 | 3 bit inc - 5 bit not inc. | 32 | 0, 32, 64, 96, 128, 160, 192, 224 | 8 subnetworks, each 30 hosts |
+| /28 | 240 | 4 bit inc - 4 bit not inc. | 16 | 0, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240 | 16 subnetworks, each 14 hosts |
+| /29 | 248 | 5 bit inc - 3 bit not inc. | 8 | 0, 8, 16, 24, 32, 40, 48, etc. | 32 subnetworks, each 6 hosts |
+| /30 | 252 | 6 bit inc - 2 bit not inc. | 4 | 0, 4, 8, 12, 16, 20, 24, etc. | 64 subnetworks, each 2 hosts |
+
+## VLSM
+
+| Application | Mask | Hosts | Block |
+| --- | --- | --- | --- |
+| /25 | 128 | 126 | 128 |
+| /26 | 192 | 62 | 64 |
+| /27 | 224 | 30 | 32 |
+| /28 | 240 | 14 | 16 |
+| /29 | 248 | 6 | 8 |
+| /30 | 252 | 2 | 4 |
+
+| Network | Hosts | Block | Sub-network | Mask |
+| --- | --- | --- | --- | --- |
+| A | 14 | 16 | /28 | 240 | 
+| B | 30 | 32 | /27 | 224 |
+| C | 20 | 32 | /27 | 224 |
+| D | 6  | 8  | /29 | 248 |
+| E | 2  | 4  | /30 | 252 |
+| F | 2  | 4  | /30 | 252 |
+| G | 2  | 4  | /30 | 252 |
+| H | 2  | 4  | /30 | 252 |
+
