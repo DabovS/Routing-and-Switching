@@ -246,3 +246,54 @@ No Internet Datagram Options
 | G | 2  | 4  | /30 | 252 |
 | H | 2  | 4  | /30 | 252 |
 
+## General IP Troubleshooting 
+
+![General IP Troubleshooting drawio - 1](https://user-images.githubusercontent.com/124214430/217102801-8eb630ca-87c9-46c8-a472-5b95d357817b.png)
+
+
+1. **CMD > Ping > 127.0.0.1** (if successful - initiate, if not > install TC/IP in host).
+
+```
+C:\> ping 127.0.0.1
+Pinging 127.0.0.1 with 32 bytes of data:
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Ping statistics for 127.0.0.1:
+Packets: Sent &x0003D; 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+Minimum = 0 ms, Maximum = 0ms, Average = 0ms
+```
+
+2. **CMD > Ping > local host** (if successful NIC is OK, if not> > NIC cable connection check).
+
+```
+C:\> ping 172.16.10.2
+Pinging 172.16.10.2 with 32 bytes of data:
+Reply from 172.16.10.2: bytes=32 time<1ms TTL=128
+Reply from 172.16.10.2: bytes=32 time<1ms TTL=128
+Reply from 172.16.10.2: bytes=32 time<1ms TTL=128
+Reply from 172.16.10.2: bytes=32 time<1ms TTL=128
+Ping statistics for 172.16.10.2:
+Packets: Sent &x0003D; 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+Minimum = 0 ms, Maximum = 0ms, Average = 0ms
+```
+
+3. **CMD > Ping > Default Gateway** (if successful NIC is OK and coms with local, if not > local physical network problem detected in NIC).
+
+```
+C:\> ping 172.16.10.1
+Pinging 172.16.10.1 with 32 bytes of data:
+Reply from 172.16.10.1: bytes=32 time<1ms TTL=128
+Reply from 172.16.10.1: bytes=32 time<1ms TTL=128
+Reply from 172.16.10.1: bytes=32 time<1ms TTL=128
+Reply from 172.16.10.1: bytes=32 time<1ms TTL=128
+Ping statistics for 172.16.10.1:
+Packets: Sent &x0003D; 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+Minimum = 0 ms, Maximum = 0ms, Average = 0ms
+```
+
+4. **CMD > Ping > Server** (if successful communication with server established, if not potential problem with DNS settings).
