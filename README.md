@@ -298,3 +298,9 @@ Minimum = 0 ms, Maximum = 0ms, Average = 0ms
 ```
 
 4. **CMD > Ping > Server** (if successful communication with server established, if not potential problem with DNS settings).
+
+### Access-Sales-Finance Example
+
+![Access-Sales-Fianance](https://user-images.githubusercontent.com/124214430/221985966-3f8fa450-0a50-4ab4-bf60-82bad0dc0c06.png)
+
+
